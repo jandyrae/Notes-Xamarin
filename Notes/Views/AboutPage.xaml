@@ -17,7 +17,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="Jandy's Notes"
+                            <Span Text="Notes"
                                   FontAttributes="Bold"
                                   FontSize="26" TextColor="DarkGray" />
                             <Span Text=" v1.0" />
