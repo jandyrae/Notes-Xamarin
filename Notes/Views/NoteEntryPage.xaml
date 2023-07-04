@@ -12,10 +12,12 @@
         <!-- Layout children in two columns -->
         <Grid ColumnDefinitions="*,*">
             <Button Text="Save"
-                    Clicked="OnSaveButtonClicked" />
+                    Clicked="OnSaveButtonClicked" 
+                    BackgroundColor="Green" />
             <Button Grid.Column="1"
                     Text="Delete"
-                    Clicked="OnDeleteButtonClicked"/>
+                    Clicked="OnDeleteButtonClicked"
+                    BackgroundColor="DarkRed" />
         </Grid>
     </StackLayout>
 </ContentPage>
