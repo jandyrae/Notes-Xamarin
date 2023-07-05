@@ -2,16 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AboutPage"
-             Title="About">
+             Title="About this app">
     <!-- Layout children in two rows -->
     <Grid RowDefinitions="Auto,*">
         <Image Source="xamarin_logo.png"
-               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}"
+               BackgroundColor="{StaticResource AppBackgroundColor}"
+               Opacity="0.85"
                VerticalOptions="Center"
-               HeightRequest="64" />
+               HeightRequest="64" 
+               Margin="10"/>
         <!-- Layout children vertically -->
         <StackLayout Grid.Row="1"
-                     Margin="20"
+                     Margin="{StaticResource PageMargin}"
                      Spacing="20">
             <Label FontSize="22">
                 <Label.FormattedText>
@@ -19,16 +21,20 @@
                         <FormattedString.Spans>
                             <Span Text="Notes"
                                   FontAttributes="Bold"
-                                  FontSize="26" TextColor="DarkGray" />
+                                  FontSize="26" 
+                                  TextColor="{StaticResource AppPrimaryColor}"/>
                             <Span Text=" v1.0" />
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Text="This app is written in XAML and C# with the Xamarin Platform." TextColor="DarkGray"/>
-            <Button Text="Learn more"
-                    Clicked="OnButtonClicked" 
-                    />
+            <Label Text="This app is from a completed tutorial with some edits by" TextColor="{StaticResource TertiaryColor}"/>
+            <Label Text="Jandy Kiger" HorizontalOptions="Center"></Label>
+            <Label Text="and is written in XAML and C# with the Xamarin Platform." TextColor="{StaticResource TertiaryColor}" />
+                    <Button Text="Learn more"
+                    Clicked="OnButtonClicked" />
         </StackLayout>
     </Grid>
+
+ 
 </ContentPage>

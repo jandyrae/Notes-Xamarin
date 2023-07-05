@@ -3,15 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.NoteEntryPage"
              Title="Note Entry">
+
+    <ContentPage.Resources>
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type Editor}">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+    </ContentPage.Resources>
+
+
     <!-- Layout children vertically -->
     <StackLayout Margin="20">
-        <Editor Placeholder="Enter your note"
+        <Editor Placeholder="Enter your note..."
                 Text="{Binding Text}"
-                HeightRequest="100" 
-                TextColor="#2196F3"/>
+                HeightRequest="200" 
+                
+                />
         <!-- Layout children in two columns -->
         <Grid ColumnDefinitions="*,*">
-            <Button Text="Save"
+            <Button Text="Save Note"
                     Clicked="OnSaveButtonClicked" 
                     BackgroundColor="Green" />
             <Button Grid.Column="1"
